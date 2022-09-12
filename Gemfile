@@ -59,6 +59,12 @@ end
 gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 
 #installing heroku
-group :production do
-  gem 'pg', '~> 1.4', '>= 1.4.3'
+# group :production do
+#   gem 'pg', '~> 1.4', '>= 1.4.3'
+# end
+
+
+group :development, :test do
+  gem 'sqlite3'
 end
+gem 'pg', group: :production
