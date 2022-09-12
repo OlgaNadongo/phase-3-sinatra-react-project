@@ -13,7 +13,7 @@ puts "Creating teammates ..."
 Teammate.create(name:"Miya", email:"miya@yahoo.com")
 Teammate.create(name:"Zia", email:"zia@gmail.com")
 
-puts "Creating teammate_projects"
- teammate_projects.create()
+# puts "Creating teammate_projects"
+#  teammate_projects.create()
 
 puts "✅ Done seeding!"
