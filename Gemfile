@@ -75,3 +75,4 @@ group :test, :development do
   #comment out sqlite gem if using postgresql for test and development database
   gem 'sqlite3'
 end
+gem "webrick", "~> 1.7"
