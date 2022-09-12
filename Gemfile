@@ -64,7 +64,14 @@ gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 # end
 
 
-group :development, :test do
+# group :development, :test do
+#   gem 'sqlite3'
+# end
+
+gem 'pg', group: :production
+
+group :test, :development do
+ 
+  #comment out sqlite gem if using postgresql for test and development database
   gem 'sqlite3'
 end
-gem 'pg', group: :production
