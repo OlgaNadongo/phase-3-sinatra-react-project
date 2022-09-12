@@ -12,7 +12,6 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    bcrypt (3.1.18)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     daemons (1.4.1)
@@ -24,6 +23,8 @@ GEM
     database_cleaner-core (2.0.1)
     diff-lcs (1.5.0)
     eventmachine (1.2.7)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -92,7 +93,6 @@ GEM
     tilt (2.0.11)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    webrick (1.7.0)
     zeitwerk (2.6.0)
 
 PLATFORMS
@@ -100,9 +100,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 6.1)
-  bcrypt
   database_cleaner (~> 2.0)
-  pg
+  faker (~> 2.18)
+  pg (~> 1.4, >= 1.4.3)
   pry (~> 0.14.1)
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
@@ -112,12 +112,11 @@ DEPENDENCIES
   rerun
   rspec (~> 3.10)
   rspec-json_expectations (~> 2.2)
-  sinatra
+  sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sinatra-contrib (~> 2.2, >= 2.2.2)
-  sqlite3
+  sqlite3 (~> 1.4)
   thin (~> 1.8)
-  webrick (~> 1.7)
 
 RUBY VERSION
    ruby 2.7.4p191

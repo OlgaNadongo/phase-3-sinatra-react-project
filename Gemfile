@@ -1,15 +1,14 @@
 source "https://rubygems.org"
 ruby "2.7.4"
 
-
-
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
-# gem "sinatra", "~> 2.1"
-gem "sinatra"
+gem "sinatra", "~> 2.1"
 
-#use activemodel has secure password
-gem 'bcrypt'
+# Used to generate seed data
+# https://github.com/faker-ruby/faker
+gem "faker", "~> 2.18"
+
 # A fast and simple web server
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
@@ -35,7 +34,11 @@ gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
-# gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
+
+# gem "pg"
+
+gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
@@ -57,23 +60,6 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
-gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
-
-#installing heroku
-# group :production do
-#   gem 'pg', '~> 1.4', '>= 1.4.3'
-# end
-
-
-# group :development, :test do
-#   gem 'sqlite3'
-# end
-
-gem 'pg', group: :production
-
-group :test, :development do
- 
-  #comment out sqlite gem if using postgresql for test and development database
-  gem 'sqlite3'
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end
-gem "webrick", "~> 1.7"
