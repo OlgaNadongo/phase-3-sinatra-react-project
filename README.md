@@ -6,7 +6,7 @@
      This is the backend for the Sweezy Project Manager App. The project uses a sinatra API backend. The API created enables the frontend of the app(React) to interact with the database to perform CRUD operations using Active Record.This backend side of the project relies on one-to-many and many-to-many relationships in the models created to target various elements within the React components.
 
 ## **Link**
-[Sweezy Project Manger]
+[Sweezy Project Manger](https://sweezyprojectmanager.herokuapp.com/users)
 
  ## **License**
  MIT License
